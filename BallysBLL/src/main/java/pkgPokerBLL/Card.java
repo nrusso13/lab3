@@ -10,8 +10,13 @@ public class Card implements Comparable {
 	private eRank eRank;
 	private eSuit eSuit;
 	private int iCardNbr;
+	private boolean wild=false;
 
 	public Card() {
+	}
+	public void isWild(){
+		wild = true;
+		
 	}
 
 	public Card(eRank eRank, eSuit eSuit, int iCardNbr) {
@@ -51,7 +56,9 @@ public class Card implements Comparable {
 		return c.geteRank().compareTo(this.geteRank());
 
 	}
-
+	public String toString(){
+		return (this.eRank+" of "+this.eSuit);
+	}
 	public static Comparator<Card> CardRank = new Comparator<Card>() {
 
 		public int compare(Card c1, Card c2) {

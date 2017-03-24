@@ -13,4 +13,9 @@ public class Player {
 		PlayerName = playerName;
 	}
 
+	public UUID getPlayerID() {
+		
+		return PlayerID;
+	}
+
 }
